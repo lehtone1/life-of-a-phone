@@ -1,3 +1,7 @@
-<header class="header">
-  <h1 class="title">This is title</h1>
+<header class="header" style="display:none">
+  <h1 class="title" ng-class="tit">This is title</h1>
+  <input id="setbtn" type="button" value="set" ng-click="myVar='my-class'">
+  <input id="clearbtn" type="button" value="clear" ng-click="myVar=''">
+  <br>
+  <span class="base-class" ng-class="myVar">Sample Text</span>
 </header>

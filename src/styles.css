@@ -9,11 +9,15 @@ body {
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
-    color: #000;
+    color: #FFF;
+    height: 100vh;
     
 }
 
 h2, h3, a{
+}
+
+h3 {
     text-align: center;
 }
 
@@ -22,25 +26,75 @@ img {
 }
 
 a {
-    display: block;
-    margin: 30px auto;
+    margin: 60px auto;
     font-size: 150%;
+    color: #FFF;
+    border: 2px solid #F97319;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .questions-container {
     display: flex;
+    margin-bottom: 50px;
 }
 
 .question {
     margin-left:4%;
     width: 22%;
-    background-color: #EEE;
+    border: 2px solid #F97319;
+    background-color: transparent;
+    color: #FFF;
+}
+
+.question:hover {
+    cursor: pointer;
+    background-color: #000;
 }
 
 .question:first-child {
     margin-left: 0;
 }
 
+.red {
+    color: #FF0000;
+}
+
+.title {
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.base-class {
+    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.base-class.my-class {
+    color: red;
+    font-size:3em;
+}
+
+.inner-wrapper {
+    width:60%;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+#endResult {
+    border: 2px solid #F97319;
+    margin-bottom: 50px;
+}
+
+
+.description {
+    border: 2px solid #F97319;
+}
 
 /*******************************
 ******** MEDIA QUERIES**********

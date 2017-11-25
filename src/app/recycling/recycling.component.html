@@ -1,15 +1,31 @@
-<div>
-  <h2>This is recycling</h2>
-  <p class="section-description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-  <div class="questions-container">
-      <div *ngFor="let question of questions" class="question">
-        <img src="{{ question.image}}" alt="">
+<div class="wrapper" style="background-image:url(../../assets/images/recycle.jpg">
+  <div class="inner-wrapper">
+      <h2>RECYCLING</h2>
+      <p class="section-description">The product life cycle of an Iphone does not end when you stop using it. It is when it’s recycled it reaches the end of it’s lifeline. By recycling it many parts can be reused, for example valuable metals like gold, copper and tungsten found in the electronic connections of Iphones. </p>
+      <p class="section-description">But smartphones are considered a hazardous waste, what do you think is the optimal method to dispose of it ?</p>
+    <div class="questions-container">
+      <button *ngFor="let question of questions" class="question" (mouseenter) ="mouseEnter(question.id)"  (mouseleave) ="mouseLeave(question.id)" (click)="boxClicked(question.id)" id="{{question.id}}">
         <h3>{{ question.title}}</h3>
-        <p>{{ question.description}}</p>
-        <input type="radio" id="{{ question.id }}"
-        name="contact" value="">
-       <label for="{{ question.id }}">Choose option</label>
-      </div>
+      </button>
     </div>
-  <a href="" id="feedback" routerLink="/feedback">Feedback</a>
+    <div>
+      <div *ngFor="let question of questions" >
+        <div id="{{question.id}}-details" style="display:none" class="description">
+            <div *ngFor="let paragraph of question.description">
+                <p >{{paragraph}}</p>
+            </div> 
+        </div>
+      </div>      
+    </div>
+    <div id="endResult" style="display:none">
+      <p> SO an ideal production model from start to finish would be a closed loop where the manufacturers would recover the phone in the end of the product life cycle, and use the parts again in the production. It is important to acknowledge, that recycling also costs energy. For the time being it is not energy efficient to  recycle all parts of the phone.</p>
+      <p>To recycle your phone, take it to any tech shop smart phone retailer, they will send it to recycling or you yourself can send it to Apple’s sorting robot, Liam.</p>
+    </div>
+    <a href="" id="" routerLink="/feedback">Results</a>
+  </div>
 </div>
+
+
+
+
+

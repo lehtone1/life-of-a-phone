@@ -1,20 +1,28 @@
-
-
-<div>
-  <h2>This is transportation</h2>
-  <p class="section-description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-  <div class="questions-container">
-      <div *ngFor="let question of questions" class="question">
-        <img src="{{ question.image}}" alt="">
+<div class="wrapper" style="background-image:url(../../assets/images/worker.jpg">
+  <div class="inner-wrapper">
+      <h2>TRANSPORTATION</h2>
+      <p class="section-description">What's the journey an iPhone has to go through to get to you? Everytime a new product is created, the demand is huge! And immediate! So how do we do this? Choose a mode of transport:</p>
+    <div class="questions-container">
+      <button *ngFor="let question of questions" class="question" (mouseenter) ="mouseEnter(question.id)"  (mouseleave) ="mouseLeave(question.id)" (click)="boxClicked(question.id)" id="{{question.id}}">
         <h3>{{ question.title}}</h3>
-        <p>{{ question.description}}</p>
-        <input type="radio" id="{{ question.id }}"
-        name="contact" value="">
-       <label for="{{ question.id }}">Choose option</label>
-      </div>
+      </button>
     </div>
-  <a href="" id="manufacturing" routerLink="/manufacturing">Manufacturing</a>
+    <div>
+      <div *ngFor="let question of questions" >
+        <div id="{{question.id}}-details" style="display:none" class="description">
+            <div *ngFor="let paragraph of question.description">
+                <p >{{paragraph}}</p>
+            </div> 
+        </div>
+      </div>      
+    </div>
+    <div id="endResult" style="display:none">
+      <p> Apple transports iPhones from China to stores all around the world in airplanes. The speed of airfare is more important than the higher price tag it has.</p>
+    </div>
+    <a href="" id="" routerLink="/usage">Usage</a>
+  </div>
 </div>
+
 
 
 

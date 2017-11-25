@@ -1,15 +1,25 @@
-<div>
-  <h2>This is manufacturing</h2>
-  <p class="section-description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-  <div class="questions-container">
-      <div *ngFor="let question of questions" class="question">
-        <img src="{{ question.image}}" alt="">
+<div class="wrapper" style="background-image:url(../../assets/images/worker.jpg">
+  <div class="inner-wrapper">
+      <h2>MANUFACTORING</h2>
+      <p class="section-description"><b>WHERE</b> you choose to manufacture your product affects the whole life cycle of your product. Iphones and smartphones in general have a high demand in production so keeping the cost down while still being ethical and making sustainable choices can be tricky. Which of these countries would you choose to produce your phone?</p>
+    <div class="questions-container">
+      <button *ngFor="let question of questions" class="question" (mouseenter) ="mouseEnter(question.id)"  (mouseleave) ="mouseLeave(question.id)" (click)="boxClicked(question.id)" id="{{question.id}}">
         <h3>{{ question.title}}</h3>
-        <p>{{ question.description}}</p>
-        <input type="radio" id="{{ question.id }}"
-        name="contact" value="">
-       <label for="{{ question.id }}">Choose option</label>
-      </div>
+      </button>
     </div>
-  <a href="" id="usage" routerLink="/usage">Usage</a>
+    <div>
+      <div *ngFor="let question of questions" >
+        <div id="{{question.id}}-details" style="display:none" class="description">
+            <div *ngFor="let paragraph of question.description">
+                <p >{{paragraph}}</p>
+            </div> 
+        </div>
+      </div>      
+    </div>
+    <div id="endResult" style="display:none">
+      <p> China has been the main manufacturer and assembler of Iphones with over 80% Iphones manufactured there. This might change soon because Apple has plans on taking on the smartphone market in India but is facing competitiors that sell much cheaper products. None of the physical production takes place in the States but the process of design, development and marketing are all done in the US.</p>
+    </div>
+    <a href="" id="transportation" routerLink="/transportation">Transportation</a>
+  </div>
 </div>
+

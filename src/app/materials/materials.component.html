@@ -1,15 +1,24 @@
-<div>
-  <h2>This is materials</h2>
-  <p class="section-description">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-  <div class="questions-container">
-    <div *ngFor="let question of questions" class="question">
-      <img src="{{ question.image}}" alt="">
-      <h3>{{ question.title}}</h3>
-      <p>{{ question.description}}</p>
-      <input type="radio" id="{{ question.id }}"
-      name="contact" value="">
-     <label for="{{ question.id }}">Choose option</label>
+<div class="wrapper" style="background-image:url(../../assets/images/worker.jpg">
+  <div class="inner-wrapper">
+    <h2>Material Selection</h2>
+    <p class="section-description">Did you know that to build an iPhone you need a lot of elements? This goes from aluminum, graphite, lithium and gold used to produce parts such as the case, battery and electrical connections to even using rare metals to produce colors on the screen. Now, pick a material to start building your own:</p>
+    <div class="questions-container">
+      <button *ngFor="let question of questions" class="question" (mouseenter) ="mouseEnter(question.id)"  (mouseleave) ="mouseLeave(question.id)" (click)="boxClicked(question.id)" id="{{question.id}}">
+        <h3>{{ question.title}}</h3>
+      </button>
     </div>
+    <div>
+      <div *ngFor="let question of questions" >
+        <div id="{{question.id}}-details" style="display:none" class="description">
+            <div *ngFor="let paragraph of question.description">
+                <p >{{paragraph}}</p>
+            </div> 
+        </div>
+      </div>      
+    </div>
+    <div id="endResult" style="display:none">
+      <p> To create your final product - a 129gr iPhone - approximately 34 kilograms of ore have been mined, 100 liters of water have been used, as well as 20.5 gr of cyanide.</p>
+    </div>
+    <a href="" id="" routerLink="/manufacturing">Manufacturing</a>
   </div>
-  <a href="" id="transportation" routerLink="/transportation">Transportation</a>
 </div>
