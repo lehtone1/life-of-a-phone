@@ -47,7 +47,7 @@ a {
     color: #FFF;
 }
 
-.question:hover {
+.question:hover, #choose-button:hover {
     cursor: pointer;
     background-color: #000;
 }
@@ -75,6 +75,7 @@ a {
 
 .inner-wrapper {
     width:60%;
+    padding: 20px;
 }
 
 .wrapper {
@@ -89,12 +90,24 @@ a {
 #endResult {
     border: 2px solid #F97319;
     margin-bottom: 50px;
+    padding: 20px;
+}
+
+#choose-button {
+    width: 22%;
+    border: 2px solid #F97319;
+    background-color: transparent;
+    color: #FFF;
+    margin-bottom: 30px;
 }
 
 
 .description {
-    border: 2px solid #F97319;
+   /*  border: 2px solid #F97319; */
+    /* padding: 20px; */
 }
+
+
 
 /*******************************
 ******** MEDIA QUERIES**********

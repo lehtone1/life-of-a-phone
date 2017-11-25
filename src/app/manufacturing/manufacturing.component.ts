@@ -15,25 +15,44 @@ export class ManufacturingComponent implements OnInit {
   ]
 
   public lastID = ""
-
+  public answered = false
+  
+  
+  
   boxClicked(id) {
+
+    if ( !this.answered) {
+
+      document.getElementById(id + "-details").style.display = "block"
+      document.getElementById("choose-button").style.display = "block"
+  
+      if (this.lastID != "") {
+        document.getElementById(this.lastID).style.display = "none"
+      }
+  
+      this.lastID = id + "-details"
+  
+    }
+
+
+    }
+
+    
+
+  
+
+  makeDecision() {
+    if (!window.results) window.results = {
+      
+    }
+    window.results.manufacturing = this.lastID
+    this.answered = true
+
+    document.getElementById("choose-button").style.display = "none"
 
     if (document.getElementById("endResult").style.display == "none") {
       document.getElementById("endResult").style.display = "block"
     } 
-
-    document.getElementById(id + "-details").style.display = "block"
-
-    if (this.lastID != "") {
-      document.getElementById(this.lastID).style.display = "none"
-    }
-
-    this.lastID = id + "-details"
-
-  }
-
-  nextPage() {
-    window.results = {"manufacturing": this.lastID}
   }
 
 
