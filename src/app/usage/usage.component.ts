@@ -18,8 +18,6 @@ export class UsageComponent implements OnInit {
   
   
   boxClicked(id) {
-    window.results = {"materials": id}
-    console.log(window.results);
 
     if (document.getElementById("endResult").style.display == "none") {
       document.getElementById("endResult").style.display = "block"
@@ -33,6 +31,15 @@ export class UsageComponent implements OnInit {
 
     this.lastID = id + "-details"
 
+  }
+
+  nextPage(event) {
+    if (this.lastID == "") {
+      event.preventDefault()
+      return false
+    } else {
+      window.results = {"usage": this.lastID}
+    }
   }
 
   constructor() { }

@@ -17,8 +17,6 @@ export class ManufacturingComponent implements OnInit {
   public lastID = ""
 
   boxClicked(id) {
-    window.results = {"manufacturing": id}
-    console.log(window.results);
 
     if (document.getElementById("endResult").style.display == "none") {
       document.getElementById("endResult").style.display = "block"
@@ -32,6 +30,10 @@ export class ManufacturingComponent implements OnInit {
 
     this.lastID = id + "-details"
 
+  }
+
+  nextPage() {
+    window.results = {"manufacturing": this.lastID}
   }
 
 

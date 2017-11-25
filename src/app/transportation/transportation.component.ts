@@ -23,8 +23,6 @@ export class TransportationComponent implements OnInit {
   
   
   boxClicked(id) {
-    window.results = {"materials": id}
-    console.log(window.results);
 
     if (document.getElementById("endResult").style.display == "none") {
       document.getElementById("endResult").style.display = "block"
@@ -38,6 +36,10 @@ export class TransportationComponent implements OnInit {
 
     this.lastID = id + "-details"
 
+  }
+
+  nextPage() {
+    window.results = {"transportation": this.lastID}
   }
 
   /* mouseEnter(id) {

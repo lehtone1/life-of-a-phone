@@ -9,8 +9,7 @@ import { Question } from '../question.model';
 })
 export class MaterialsComponent implements OnInit {
 
-  public lastID = ""
-
+  
   questions: Question[] = [
     new Question('ALUMINIUM', 
     ["To obtain it, miners remove all the soil that covers the aluminum, a process called strip mining.", "It comes from bauxite, so in order to get 1 ton of aluminum, 4 tons of bauxite have to be extracted, creating a lot of waste.", "An iPhone contains 31.14gr of aluminum, used for the case, battery and screen. It is responsible for 30% of Apple's footprint.", "Since the mining process is so invasive, aluminum extraction can lead to natural landscape distruction, and hazardous working conditions."], 'http://via.placeholder.com/250x150', 'choice1'),
@@ -18,10 +17,12 @@ export class MaterialsComponent implements OnInit {
     new Question('TIN', ["Its biggest source is in Potosì, Bolivia. Workers also dig for silver, zinc, and other lead ores that will later be sold to bigger companies.", "An iPhone contains 0.66gr of tin, used for screens, but also plays a big part in soldering.", "The height make working conditions inhumane, having to deal with extreme temperatures, inadequate equipment, resulting in severe health problems, or death."]
     , 'http://via.placeholder.com/250x150', 'choice3'),
   ]
+
+  public lastID = ""
+  
+  
   
   boxClicked(id) {
-    window.results = {"materials": id}
-    console.log(window.results);
 
     if (document.getElementById("endResult").style.display == "none") {
       document.getElementById("endResult").style.display = "block"
@@ -35,10 +36,13 @@ export class MaterialsComponent implements OnInit {
 
     this.lastID = id + "-details"
 
-
-    
-
   }
+
+  nextPage() {
+    window.results = {"materials": this.lastID}
+  }
+
+
 
   mouseEnter(id) {
     /* document.getElementById(id).style.display = "inline" */
