@@ -1,0 +1,13 @@
+.header {
+    background-image: url(http://via.placeholder.com/1200x400);
+    background-position: center;
+    max-width: 1200px;
+    margin: auto;
+    height:400px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}

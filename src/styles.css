@@ -1,1 +1,70 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    padding-top: 0px;
+}
+
+body {
+    margin-top: 0px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    color: #000;
+    
+}
+
+h2, h3, a{
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    display: block;
+    margin: 30px auto;
+    font-size: 150%;
+}
+
+.questions-container {
+    display: flex;
+}
+
+.question {
+    margin-left:4%;
+    width: 22%;
+    background-color: #EEE;
+}
+
+.question:first-child {
+    margin-left: 0;
+}
+
+
+/*******************************
+******** MEDIA QUERIES**********
+*******************************/
+
+@media only screen and (max-width: 768px) {
+    .question {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .question:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .questions-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .question {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

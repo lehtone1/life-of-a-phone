@@ -9,7 +9,6 @@ import { MaterialsComponent } from './materials/materials.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
 import { TransportationComponent } from './transportation/transportation.component';
 import { UsageComponent } from './usage/usage.component';
-import { DisposalComponent } from './disposal/disposal.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { RecyclingComponent } from './recycling/recycling.component';
 import { HeadingComponent } from './heading/heading.component';
@@ -25,16 +24,15 @@ import { AppRoutingModule, RoutingComponents } from './app.routing';
     ManufacturingComponent,
     TransportationComponent,
     UsageComponent,
-    DisposalComponent,
     FeedbackComponent,
     RecyclingComponent,
     HeadingComponent,
     FooterComponent,
-    RoutingComponents
+    RoutingComponents,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [[{provide: LocationStrategy,
   useClass: HashLocationStrategy}]],
