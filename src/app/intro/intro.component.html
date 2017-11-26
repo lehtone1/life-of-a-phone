@@ -1,4 +1,4 @@
-<div class="wrapper" style="flex-direction:column;align-items:center">
+<div class="wrapper" style="flex-direction:column;align-items:center;overflow: visible;">
   <div class="inner-wrapper">
       <!-- <div>
           <iframe 
@@ -6,9 +6,9 @@
           </iframe>
       </div> -->
       <a (click)="showVideo()" class="video-container">
-        <div id="placeholder" style=";display:flex;justify-content:center;align-items:center;">
+        <div id="placeholder">
             <img src="../../assets/images/into.png">
-            <i class="material-icons" style="color:#FFF;font-size:8em;display:float;position: absolute;z-index: 1;opacity:0.5">play_arrow</i>
+            <i class="material-icons" id="play-icon">play_arrow</i>
         </div>
         <iframe id="iframe" width="830" height="455" style="display:none" src="https://www.youtube.com/embed/eRLJscAlk1M"  frameborder="0" allowfullscreen>
         </iframe>
