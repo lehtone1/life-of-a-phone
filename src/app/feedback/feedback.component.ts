@@ -66,20 +66,23 @@ const SCORE_MAP = {
 export class FeedbackComponent implements OnInit {
 
   constructor() { }
+  public sustainabilityTotal = 0
+  public costTotal = 0
+  public sustainabilityPct = 0
+  public costPct = 0
 
   ngOnInit() {
-    console.log(window.results)
+    if (!window.results) return
     const values = Object.keys(SCORE_MAP).map(key => {
       const choice = window.results[key]
       return SCORE_MAP[key][choice]
     }).filter(v => !!v)
 
-    this.sustainabilityTotal = values.map(value => value.sustainability).reduce((prev, cur) => prev + cur, 0)
-    this.costTotal = values.map(value => value.cost).reduce((prev, cur) => prev + cur, 0)
+    this.sustainabilityTotal = values.map(value => value.sustainability).reduce((prev, cur) => prev + cur, 0) || 0
+    this.costTotal = values.map(value => value.cost).reduce((prev, cur) => prev + cur, 0) || 0
 
-    // document.getElementById('sustainability_result').textContent = sustainabilityTotal
-    // document.getElementById('cost_result').textContent = costTotal
-
+    this.sustainabilityPct = Math.floor(this.sustainabilityTotal / 12 * 100)
+    this.costPct = Math.floor(this.costTotal / 12 * 100)
   }
 
 }
