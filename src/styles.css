@@ -111,6 +111,7 @@ a {
 .video-container {
     display:block;
     max-width: 830px;
+    border: 0;
 }
 
 
