@@ -12,15 +12,15 @@
         <div id="{{question.id}}-details" style="display:none" class="description">
             <div *ngFor="let paragraph of question.description">
                 <p >{{paragraph}}</p>
-            </div> 
+            </div>
         </div>
-      </div>   
-      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>       
+      </div>
+      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>
     </div>
     <div id="endResult" style="display:none">
       <p>Reusing the phone will increase the cycle time of the product, which will decrease the energy costs and waste material costs of the cycle, so reusing a phone is more ecological than recycling and electronic waste.</p>
     </div>
-    <a href="" id="" routerLink="/recycling" (click)="nextPage($event)">Proceed</a>
+    <a href="" id="" routerLink="/recycling">Proceed</a>
   </div>
 </div>
 

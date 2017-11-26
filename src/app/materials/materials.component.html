@@ -12,14 +12,14 @@
         <div id="{{question.id}}-details" style="display:none" class="description">
             <div *ngFor="let paragraph of question.description">
                 <p >{{paragraph}}</p>
-            </div> 
+            </div>
         </div>
-      </div>  
-      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>    
+      </div>
+      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>
     </div>
     <div id="endResult" style="display:none">
       <p> To create your final product - a 129gr iPhone - approximately 34 kilograms of ore have been mined, 100 liters of water have been used, as well as 20.5 gr of cyanide.</p>
     </div>
-    <a href="" id="" routerLink="/manufacturing" (click)="nextPage()">Proceed</a>
+    <a href="" id="" routerLink="/manufacturing">Proceed</a>
   </div>
 </div>
