@@ -9,7 +9,7 @@ import { Question } from '../question.model';
 export class UsageComponent implements OnInit {
 
 
-  questions: Question[] = [new Question("A new model came out and I wanted it", ["One Iphone produces between 50-80 kg Co2", "You could drive a car to Turku with that power"], "", "choice1"),
+  questions: Question[] = [new Question("A new model came out and I wanted it", ["One iPhone produces between 50-80 kg Co2", "You could drive a car to Turku with that power"], "", "choice1"),
   new Question("My phone broke", "", "", "choice2"),
   new Question("I haven’t bought a new phone in a while", ["Take care of battery life", "Keep it in generally good condition"], "", "choice4"),]
   
