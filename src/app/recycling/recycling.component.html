@@ -13,16 +13,16 @@
         <div id="{{question.id}}-details" style="display:none" class="description">
             <div *ngFor="let paragraph of question.description">
                 <p >{{paragraph}}</p>
-            </div> 
+            </div>
         </div>
-      </div> 
-      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>         
+      </div>
+      <button (click)="makeDecision()" id="choose-button" style="display:none"><h3>Choose option</h3></button>
     </div>
     <div id="endResult" style="display:none">
       <p> SO an ideal production model from start to finish would be a closed loop where the manufacturers would recover the phone in the end of the product life cycle, and use the parts again in the production. It is important to acknowledge, that recycling also costs energy. For the time being it is not energy efficient to  recycle all parts of the phone.</p>
       <p>To recycle your phone, take it to any tech shop smart phone retailer, they will send it to recycling or you yourself can send it to Apple’s sorting robot, Liam.</p>
     </div>
-    <a href="" id="" routerLink="/feedback">Results</a>
+    <a href="" id="" routerLink="/result">Results</a>
   </div>
 </div>
 

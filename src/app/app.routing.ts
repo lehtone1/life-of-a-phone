@@ -8,6 +8,7 @@ import { TransportationComponent } from './transportation/transportation.compone
 import { UsageComponent } from './usage/usage.component'
 import { RecyclingComponent } from './recycling/recycling.component'
 import { FeedbackComponent } from './feedback/feedback.component'
+import { ResultComponent } from './result/result.component'
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'transportation', component: TransportationComponent},
   { path: 'usage', component: UsageComponent},
   { path: 'recycling', component: RecyclingComponent},
+  { path: 'result', component: ResultComponent},
   { path: 'feedback', component: FeedbackComponent}
 ];
 

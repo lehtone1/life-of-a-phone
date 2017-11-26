@@ -14,6 +14,7 @@ import { RecyclingComponent } from './recycling/recycling.component';
 import { HeadingComponent } from './heading/heading.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule, RoutingComponents } from './app.routing';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { AppRoutingModule, RoutingComponents } from './app.routing';
     HeadingComponent,
     FooterComponent,
     RoutingComponents,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
