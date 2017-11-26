@@ -10,7 +10,8 @@ export class IntroComponent implements OnInit {
   showVideo() {
     document.getElementById('placeholder').style.display = 'none'
     document.getElementById('iframe').style.display = 'block'
-    document.getElementById('iframe').src += "?autoplay=1";
+    var iframe = document.getElementById('iframe') as HTMLIFrameElement
+    iframe.src += "?autoplay=1";
     
   }
 
