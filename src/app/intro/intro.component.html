@@ -1,10 +1,25 @@
-<div class="wrapper" style="flex-direction:column">
+<div class="wrapper" style="flex-direction:column;align-items:center">
   <div class="inner-wrapper">
       <!-- <div>
           <iframe 
           src="https://www.youtube.com/embed/XGSy3_Czz8k">
           </iframe>
       </div> -->
+      <a (click)="showVideo()" class="video-container">
+        <div id="placeholder" style=";display:flex;justify-content:center;align-items:center;">
+            <img src="http://via.placeholder.com/830x455">
+            <i class="material-icons" style="color:#000;font-size:8em;display:float;position: absolute;z-index: 1;">play_arrow</i>
+        </div>
+        <iframe id="iframe" width="830" height="455" style="display:none"
+        src="https://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1">
+        </iframe>
+      </a> 
+      
+        
+
+      <!-- <div style="width980px;height:550px;background-image:url(http://via.placeholder.com/980x550);display:flex;justify-content:center;align-items:center;">
+        <i class="material-icons" style="color:#000;font-size:8em;">play_arrow</i>
+      </div>  -->
   </div>
   <a href="" id="materials" routerLink="/materials" (click)="toggle_class()" style="color:#000">Get started</a>
 </div>

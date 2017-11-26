@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  showVideo() {
+    document.getElementById('placeholder').style.display = 'none'
+    document.getElementById('iframe').style.display = 'block'
+  }
+
   constructor() { }
 
   ngOnInit() {

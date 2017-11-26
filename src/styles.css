@@ -41,8 +41,8 @@ a {
 }
 
 .question {
-    margin-left:4%;
-    width: 22%;
+    margin-left:3%;
+    width: 30%;
     border: 2px solid #F97319;
     background-color: transparent;
     color: #FFF;
@@ -108,12 +108,24 @@ a {
    /*  border: 2px solid #F97319; */
     /* padding: 20px; */
 }
+.video-container {
+    display:block;
+    max-width: 830px;
+}
 
 
 
 /*******************************
 ******** MEDIA QUERIES**********
 *******************************/
+
+@media only screen and (max-width: 1200px) {
+    
+        display: none;    
+    
+}
+
+
 
 @media only screen and (max-width: 768px) {
     .question {
@@ -137,3 +149,4 @@ a {
     }
 
 }
+
